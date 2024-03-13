@@ -29,11 +29,11 @@
 
 
 
-|   | Column 2      | Column 3      |
-|---| ------------- | ------------- |
-|1. | Row 1, Cell 2 | Row 1, Cell 3 |
-|2. | Row 2, Cell 2 | Row 2, Cell 3 |
-|3. | Row 3, Cell 2 | Row 3, Cell 3 |
+|   | Name                    | ID No.      |
+|---| ------------------------| ------------|
+|1. | Biruk Maru Asnakew      | UGR/4775/13 |
+|2. | Nardos Amakele Demissie | UGR/6957/14 |
+|3. | Zemenu Mekuria Embiale  | UGR/5017/14 |
 
 
 
