@@ -1,6 +1,6 @@
-# Course Manager - Mobile Application
+# classhub - Mobile Application
 
-The Course Manager mobile application is designed to facilitate the organization and management of courses, assignments. This mobile app allows teachers to create courses, add assignments, and monitor student submissions, while students can view course materials, receive notifications about upcoming deadlines.
+The classhub mobile application is designed to facilitate the organization and management of courses, assignments. This mobile app allows teachers to create courses, add assignments, and monitor student submissions, while students can view course materials, receive notifications about upcoming deadlines.
 
 ## Features
 
@@ -30,12 +30,13 @@ The Course Manager mobile application is designed to facilitate the organization
 - Teachers can add assignments or tasks to courses, specifying details such as title, description, and due date.
 - Students can view assigned tasks, submit completed assignments.
 - Students can mark assingments done.
+- 
 ### Notification
 - Students get notification when assignment is added
 
 
 
-
+##contributers
 
 
 
