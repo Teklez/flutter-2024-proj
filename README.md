@@ -28,9 +28,8 @@ The classhub mobile application is designed to facilitate the organization and m
 
 ### Assignment/Task (*)
 - Teachers can add assignments or tasks to courses, specifying details such as title, description, and due date.
-- Students can view assigned tasks, submit completed assignments.
-- Students can mark assingments done.
-- 
+- Students can view assigned tasks and mark assignments done.
+
 ### Notification
 - Students get notification when assignment is added
 
