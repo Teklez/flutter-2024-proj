@@ -35,7 +35,7 @@ The classhub mobile application is designed to facilitate the organization and m
 
 
 
-##contributers
+## Contributers
 
 
 
