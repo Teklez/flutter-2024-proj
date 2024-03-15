@@ -1,6 +1,6 @@
-# Course Management System (CMS) - Mobile Application
+# Course Manager - Mobile Application
 
-The Course Management System (CMS) mobile application is designed to facilitate the organization and management of courses, assignments. This mobile app allows teachers to create courses, add assignments, and monitor student submissions, while students can view course materials, receive notifications about upcoming deadlines.
+The Course Manager mobile application is designed to facilitate the organization and management of courses, assignments. This mobile app allows teachers to create courses, add assignments, and monitor student submissions, while students can view course materials, receive notifications about upcoming deadlines.
 
 ## Features
 
@@ -18,11 +18,11 @@ The Course Management System (CMS) mobile application is designed to facilitate 
 - Registration process ensures user data integrity and security.
 
 ### Role Assignment
-- Upon registration, users are assigned a default role (e.g., student).
+- Upon registration, users are assigned a default role (student).
 - Administrators or teachers can manually assign roles to users as needed.
 
 ### Course (*)
-- Teachers can create new courses, providing details such as course name, description, and schedule.
+- Teachers can create new courses, providing details such as course name, instructor, description, and schedule.
 - Teachers can edit course details, including adding or removing assignments and adjusting schedules.
 - Students can view available courses, enroll in courses, and access course materials.
 
@@ -32,7 +32,6 @@ The Course Management System (CMS) mobile application is designed to facilitate 
 - Students can mark assingments done.
 ### Notification
 - Students get notification when assignment is added
-- 
 
 
 
