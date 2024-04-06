@@ -1,0 +1,40 @@
+# Flutter/Dart specific
+*.iml
+*.lock
+*/.dart_tool/
+*/.flutter-plugins
+*/.packages
+*/.pub-cache/
+*/build/
+*/ios/Flutter/flutter_assets/
+*/ios/Flutter/flutter_export_environment.sh
+*/android/build/
+*/android/gradle/
+*/android/local.properties
+*/android/.gradle/
+*/android/app/build/
+*/android/gradlew
+*/android/gradlew.bat
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.code-workspace
+
+# macOS specific
+.DS_Store
+
+# Android specific
+*/android/key.properties
+*/android/*.jks
+
+# iOS specific
+*/ios/Pods/
+*/ios/*.lock
+*/ios/Flutter/Flutter.framework/
+*/ios/Flutter/Flutter.podspec
+*/ios/Flutter/Generated.xcconfig
+*/ios/Flutter/App.framework/
+*/ios/Flutter/Flutter.app/
+*/ios/Flutter/Flutter.zip
+*/ios/Flutter/Flutter.xcframework/
