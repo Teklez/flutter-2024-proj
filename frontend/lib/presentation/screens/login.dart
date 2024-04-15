@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/input_form.dart';
-import './register_screen.dart';
+import 'register.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class Login extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.red,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.elliptical(60, 60),
@@ -29,16 +29,16 @@ class Login extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(bottom: 20.0),
             child: Container(
-              decoration:
-                  BoxDecoration(shape: BoxShape.circle, color: Colors.white),
-              child: Icon(
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle, color: Colors.white),
+              child: const Icon(
                 Icons.person,
                 size: 50,
               ),
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Padding(
@@ -46,26 +46,26 @@ class Login extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Welcome",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 "Sign in to continue.",
                 style: TextStyle(fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               inputForm("Email"),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               inputForm("Password"),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Center(
@@ -79,15 +79,16 @@ class Login extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,
-                      shape: RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                           borderRadius:
                               BorderRadius.all(Radius.circular(10.0))),
                     ),
                     onPressed: () {
-                      // Handle login
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, "/", (route) => false);
                     },
-                    child: Text(
-                      "Login",
+                    child: const Text(
+                      "LogIn",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
@@ -97,13 +98,13 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("New User? "),
+                  const Text("New User? "),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -113,7 +114,7 @@ class Login extends StatelessWidget {
                         ),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       "Sign Up",
                       style: TextStyle(color: Colors.red),
                     ),

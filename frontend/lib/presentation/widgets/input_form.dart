@@ -5,7 +5,7 @@ Widget inputForm(String title) {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(title),
-      SizedBox(
+      const SizedBox(
         height: 10,
       ),
       Container(
@@ -13,8 +13,8 @@ Widget inputForm(String title) {
           borderRadius: BorderRadius.circular(10),
           border: Border.all(width: 0.5, color: Colors.grey),
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(left: 10.0),
+        child: const Padding(
+          padding: EdgeInsets.only(left: 10.0),
           child: TextField(
             decoration: InputDecoration(border: InputBorder.none),
           ),

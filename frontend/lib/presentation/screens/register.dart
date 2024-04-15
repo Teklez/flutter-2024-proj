@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/input_form.dart';
-import './login_screen.dart';
+import 'package:frontend/presentation/screens/login.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key}) : super(key: key);
@@ -115,7 +115,7 @@ class Register extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Login(),
+                          builder: (context) => LoginPage(),
                         ),
                       );
                     },
