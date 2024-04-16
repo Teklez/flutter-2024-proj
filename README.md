@@ -1,37 +1,40 @@
-# classhub - Mobile Application
 
-The classhub mobile application is designed to facilitate the organization and management of courses, assignments. This mobile app allows teachers to create courses, add assignments, and monitor student submissions, while students can view course materials, receive notifications about upcoming deadlines.
+# BetEbet - Mobile Application
+
+BetEbet is a mobile application designed to provide users with a platform to explore  various betting games. Whether you're interested in sports betting, casino games, or other forms of gambling entertainment, BetEbet offers a convenient way to engage with betting activities and enjoy the thrill of wagering.
 
 ## Features
 
 ### Authentication
-- Users can register an account and log in securely.
-- Authentication ensures that only registered users can access the app.
+- Users can create accounts and securely log in to the app.
+- Authentication ensures that only registered users can access the app's features.
 
 ### Authorization
-- Different roles (teacher, student) have varying levels of access and permissions within the app.
-- Teachers have the authority to create and manage courses and assignments.
-- Students can view courses, mark assignments done.
+- Different roles (user, admin) have distinct access levels to features and data.
+- Users can review and rate games, while admins have additional privileges for game management.
 
 ### User Registration
-- New users can easily register by providing necessary information such as name, email, and password.
-- Registration process ensures user data integrity and security.
+- New users can easily register by providing essential information such as username, email, and password.
+- The registration process ensures the integrity and security of user data.
 
 ### Role Assignment
-- Upon registration, users are assigned a default role (student).
-- Administrators or teachers can manually assign roles to users as needed.
+- Upon registration, users are assigned a default role (user).
+- Admins have the ability to assign roles to users, granting additional permissions as needed.
 
-### Course (*)
-- Teachers can create new courses, providing details such as course name, instructor, description, and schedule.
-- Teachers can edit course details, including adding or removing assignments and adjusting schedules.
-- Students can view available courses, enroll in courses, and access course materials.
+### Game Review and Rating
 
-### Assignment/Task (*)
-- Teachers can add assignments or tasks to courses, specifying details such as title, description, and due date.
-- Students can view assigned tasks and mark assignments done.
+- **Create**: Users can write reviews and rate games.
+- **Read**: Users can view game details, including reviews and ratings from other users.
+- **Update**: Users can edit or update their reviews and ratings.
+- **Delete**: Users can delete their reviews if they wish to remove them from the app.
 
-### Notification
-- Students get notification when assignment is added
+### Game Management
+
+- **Create**: Admins can add new games to the app's database, providing details such as title,  and description.
+- **Read**: Admins and users can browse the list of available games, viewing their details and reviews.
+- **Update**: Admins can edit existing game details, such as title,  or description.
+- **Delete**: Admins can remove games.
+
 
 
 
@@ -44,8 +47,3 @@ The classhub mobile application is designed to facilitate the organization and m
 |1. | Biruk Maru Asnakew      | UGR/4775/13 |
 |2. | Nardos Amakele Demissie | UGR/6957/14 |
 |3. | Zemenu Mekuria Embiale  | UGR/5017/14 |
-
-
-
-
-
