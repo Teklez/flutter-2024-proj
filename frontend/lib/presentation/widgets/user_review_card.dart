@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/edit_delete_review.dart';
 import 'package:frontend/presentation/widgets/rating.dart';
-import 'package:popover/popover.dart';
+
 import 'package:readmore/readmore.dart';
 
 class UserReview extends StatelessWidget {
@@ -28,20 +29,7 @@ class UserReview extends StatelessWidget {
                         color: Colors.grey[350])),
               ],
             ),
-            IconButton(
-                onPressed: () {
-                  showPopover(
-                      context: context,
-                      bodyBuilder: (context) => MenuItems(),
-                      width: 250,
-                      height: 150,
-                      backgroundColor: Colors.white.withOpacity(0.2),
-                      direction: PopoverDirection.top);
-                },
-                icon: Icon(
-                  Icons.more_vert,
-                  color: Colors.grey[200],
-                ))
+            Edit_Delete_PopUps()
           ],
         ),
         const SizedBox(
@@ -65,16 +53,16 @@ class UserReview extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        ReadMoreText(
+        const ReadMoreText(
           'The user interface of the app is quite intuitive, I was able to navigate and make play seamlesssly. Great job! ',
           trimLines: 1,
-          style: TextStyle(color: Colors.grey[50]),
+          style: const TextStyle(color: Colors.white),
           trimMode: TrimMode.Line,
           trimExpandedText: "show less",
           trimCollapsedText: "show more",
-          moreStyle: const TextStyle(
+          moreStyle: TextStyle(
               fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue),
-          lessStyle: const TextStyle(
+          lessStyle: TextStyle(
               fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue),
         ),
         const SizedBox(
@@ -82,7 +70,7 @@ class UserReview extends StatelessWidget {
         ),
         Container(
           decoration: BoxDecoration(
-            color: Colors.grey[800],
+            color: Colors.grey[800]!.withOpacity(0.5),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Padding(
@@ -100,7 +88,7 @@ class UserReview extends StatelessWidget {
                           color: Colors.grey[300]),
                     ),
                     Text(
-                      "12 April 2023",
+                      "12 April 2024",
                       style: TextStyle(fontSize: 16, color: Colors.grey[200]),
                     )
                   ],

@@ -51,7 +51,7 @@ class Review extends StatelessWidget {
         body: Stack(children: [
           ColorFiltered(
             colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.7),
+              Colors.black.withOpacity(0.2),
               BlendMode.dstATop,
             ),
             child: Container(
