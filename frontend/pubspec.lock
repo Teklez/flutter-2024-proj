@@ -147,6 +147,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
+  popover:
+    dependency: "direct main"
+    description:
+      name: popover
+      sha256: "6a0928ccdcf12d46b407372b644a0d94400b316d0ee072a19dcef03c2bb88c3f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.9"
+  readmore:
+    dependency: "direct main"
+    description:
+      name: readmore
+      sha256: e8fca2bd397b86342483b409e2ec26f06560a5963aceaa39b27f30722b506187
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -218,4 +234,4 @@ packages:
     version: "13.0.0"
 sdks:
   dart: ">=3.3.3 <4.0.0"
-  flutter: ">=2.5.0"
+  flutter: ">=3.16.0"

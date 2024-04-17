@@ -12,6 +12,7 @@ class BetApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'BetEbet',
       initialRoute: '/login',
       routes: {
