@@ -8,13 +8,15 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-      ),
-      body: SingleChildScrollView(
-        child: content(context),
-      ),
-    );
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+        ),
+        body: SingleChildScrollView(
+          child: Container(
+            margin: EdgeInsets.only(bottom: 16.0),
+            child: content(context),
+          ),
+        ));
   }
 
   Widget content(BuildContext context) {

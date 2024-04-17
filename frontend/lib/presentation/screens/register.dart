@@ -12,7 +12,10 @@ class RegistrationPage extends StatelessWidget {
         backgroundColor: Colors.red,
       ),
       body: SingleChildScrollView(
-        child: content(context),
+        child: Container(
+          margin: EdgeInsets.only(bottom: 16.0),
+          child: content(context),
+        ),
       ),
     );
   }

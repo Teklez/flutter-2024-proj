@@ -28,7 +28,7 @@ class BetApp extends StatelessWidget {
         '/add_game': (BuildContext context) => const AddGameForm(
               buttonName: "Add",
             ),
-        '/about': (BuildContext context) => const AboutPage(),
+        '/about': (BuildContext context) => AboutPage(),
         '/users': (BuildContext context) => const UsersPage(),
       },
       theme: ThemeData.dark(),

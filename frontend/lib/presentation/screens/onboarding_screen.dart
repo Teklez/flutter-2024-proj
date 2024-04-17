@@ -70,34 +70,36 @@ class OnboardingPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
-      child: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            //we will use our logo instead of this icon
-            Icon(
-              Icons.home,
-              size: 100,
-              color: Colors.white,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Welcome to BetEbet',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+      child: Center(
+        child: Container(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                "assets/logo.jpg",
+                width: 100,
+                height: 100,
               ),
-            ),
-            SizedBox(height: 10),
-            Text(
-              'Embark on a Thrilling Betting Adventure with BetEbet. Explore a world of sports betting, casino games, and more at your fingertips.',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.white,
+              SizedBox(height: 20),
+              Text(
+                'Welcome to BetEbet',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 10),
+              Text(
+                'Embark on a Thrilling Betting Adventure with BetEbet. Explore a world of sports betting, casino games, and more at your fingertips.',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -109,33 +111,35 @@ class OnboardingPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
-      child: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.settings,
-              size: 100,
-              color: Colors.black,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Discover the Thrill of Betting with BetEbet',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
+      child: Center(
+        child: Container(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.home_filled,
+                size: 50,
               ),
-            ),
-            SizedBox(height: 10),
-            Text(
-              ' BetEbet offers a seamless and engaging platform to indulge in your passion for betting and experience the excitement of wagering like never before.',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.black,
+              SizedBox(height: 30),
+              Text(
+                'Discover the Thrill of Betting with BetEbet',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 10),
+              Text(
+                ' BetEbet offers a seamless and engaging platform to indulge in your passion for betting and experience the excitement of wagering like never before.',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
