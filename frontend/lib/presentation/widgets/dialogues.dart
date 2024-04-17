@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:frontend/presentation/screens/game_add.dart';
 
 // EDIT DELETE DIALOGUE
@@ -62,8 +65,14 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(0),
+      ),
+      clipBehavior: Clip.none,
+      position: PopupMenuPosition.under,
       child: const Icon(Icons.menu),
       itemBuilder: (context) => _buildMenu(names, context),
+      color: Colors.green[700],
     );
   }
 }

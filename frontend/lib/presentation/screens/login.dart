@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green[700],
       ),
       body: SingleChildScrollView(
         child: content(context),
@@ -23,8 +23,8 @@ class LoginPage extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            decoration: const BoxDecoration(
-              color: Colors.red,
+            decoration: BoxDecoration(
+              color: Colors.green[700],
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.elliptical(60, 60),
               ),
@@ -34,10 +34,10 @@ class LoginPage extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(
                     shape: BoxShape.circle, color: Colors.white),
-                child: const Icon(
+                child: Icon(
                   Icons.person,
                   size: 50,
-                  color: Colors.red,
+                  color: Colors.green[700],
                 ),
               ),
             ),
@@ -77,12 +77,12 @@ class LoginPage extends StatelessWidget {
                     width: 200,
                     height: 50,
                     decoration: BoxDecoration(
-                      color: Colors.redAccent,
+                      color: Colors.greenAccent,
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.redAccent,
+                        backgroundColor: Colors.green[700],
                         shape: const RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10.0))),
@@ -110,12 +110,12 @@ class LoginPage extends StatelessWidget {
                     width: 200,
                     height: 50,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 207, 102, 102),
+                      color: Colors.green,
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 132, 72, 72),
+                        backgroundColor: Colors.green,
                         shape: const RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10.0))),
@@ -153,7 +153,7 @@ class LoginPage extends StatelessWidget {
                       },
                       child: const Text(
                         "Sign Up",
-                        style: TextStyle(color: Colors.red),
+                        style: TextStyle(color: Colors.green),
                       ),
                     )
                   ],

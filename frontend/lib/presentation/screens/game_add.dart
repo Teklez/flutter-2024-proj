@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class AddGameForm extends StatelessWidget {
   final String buttonName;
@@ -70,7 +71,8 @@ class AddGameForm extends StatelessWidget {
                 // Cancel action
                 print('Cancel');
               },
-              child: const Text('Cancel'),
+              child: Text('Cancel',
+                  style: TextStyle(color: Color.fromARGB(255, 211, 63, 63))),
             ),
             const SizedBox(width: 10.0), // Add spacing between buttons
             ElevatedButton(
@@ -80,7 +82,8 @@ class AddGameForm extends StatelessWidget {
                 // Add action
                 print('Add');
               },
-              child: Text(buttonName),
+              child:
+                  Text(buttonName, style: TextStyle(color: Colors.green[700])),
             ),
           ],
         ),
