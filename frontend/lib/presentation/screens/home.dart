@@ -10,7 +10,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Menu(names: ["Home", "About", "Logout"]),
+        leading: const Menu(names: [
+          ["Home", "/home"],
+          ["About", "/about"],
+          ["Logout", "/login"]
+        ]),
         actions: <Widget>[
           IconButton(
             icon: const Icon(

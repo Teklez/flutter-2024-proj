@@ -13,7 +13,12 @@ class AdminPage extends StatelessWidget {
       appBar: AppBar(
           title: const Text("BetEbet"),
           leading: const Menu(
-            names: ["Home", "User", "Logout"],
+            names: [
+              ["Home", '/admin'],
+              ["Users", '/users'],
+              ["Add Game", '/add_game'],
+              ["Logout", '/login']
+            ],
           )),
       body: GridView.count(
         crossAxisCount: 1,

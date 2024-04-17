@@ -45,24 +45,28 @@ class EditDeleteDialogue extends StatelessWidget {
 }
 
 class Menu extends StatelessWidget {
-  final List<String> names;
+  final List<List<String>> names;
   const Menu({super.key, required this.names});
 
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
       child: const Icon(Icons.menu),
-      itemBuilder: (context) => _buildMenu(names),
+      itemBuilder: (context) => _buildMenu(names, context),
     );
   }
 }
 
-List<PopupMenuItem> _buildMenu(names) {
+List<PopupMenuItem> _buildMenu(names, context) {
   final List<PopupMenuItem<int>> popupMenus = [];
   for (int i = 0; i < names.length; i++) {
     var item = PopupMenuItem(
       value: i,
-      child: Text(names[i]),
+      child: Text(names[i][0]),
+      onTap: () {
+        Navigator.pushNamedAndRemoveUntil(
+            context, "${names[i][1]}", (route) => false);
+      },
     );
     popupMenus.add(item);
   }
