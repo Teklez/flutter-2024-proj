@@ -21,6 +21,7 @@ class UsersPage extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green[700],
         title: const Text("BetEbet"),
         leading: const Menu(
           names: [
@@ -43,7 +44,7 @@ class UsersPage extends StatelessWidget {
     for (var i = 0; i < users.length; i++) {
       var card = Card(
         child: ListTile(
-          leading: Icon(Icons.person),
+          leading: Icon(Icons.person, color: Colors.green[700]),
           title: Text(users[i].name),
           subtitle: Text(users[i].role),
           trailing: const BlockRole(),

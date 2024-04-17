@@ -9,7 +9,7 @@ class RegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green[700],
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -26,7 +26,7 @@ class RegistrationPage extends StatelessWidget {
         Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.red,
+            color: Colors.green[700],
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.elliptical(60, 60),
             ),
@@ -39,7 +39,7 @@ class RegistrationPage extends StatelessWidget {
               child: Icon(
                 Icons.person,
                 size: 50,
-                color: Colors.red,
+                color: Colors.green[700],
               ),
             ),
           ),
@@ -87,12 +87,12 @@ class RegistrationPage extends StatelessWidget {
                   width: 200,
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Colors.redAccent,
+                    color: Colors.green,
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
+                      backgroundColor: Colors.green,
                       shape: RoundedRectangleBorder(
                           borderRadius:
                               BorderRadius.all(Radius.circular(10.0))),
@@ -127,7 +127,7 @@ class RegistrationPage extends StatelessWidget {
                     },
                     child: Text(
                       "Login",
-                      style: TextStyle(color: Colors.red),
+                      style: TextStyle(color: Colors.green[700]),
                     ),
                   )
                 ],
