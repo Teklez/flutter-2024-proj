@@ -36,6 +36,7 @@ class RegistrationPage extends StatelessWidget {
               child: Icon(
                 Icons.person,
                 size: 50,
+                color: Colors.red,
               ),
             ),
           ),

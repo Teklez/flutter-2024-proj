@@ -37,6 +37,7 @@ class LoginPage extends StatelessWidget {
                 child: const Icon(
                   Icons.person,
                   size: 50,
+                  color: Colors.red,
                 ),
               ),
             ),

@@ -7,6 +7,7 @@ import 'package:frontend/presentation/screens/register.dart';
 import 'package:frontend/presentation/screens/admin_page.dart';
 import 'package:frontend/presentation/screens/review.dart';
 import 'package:frontend/presentation/screens/users.dart';
+import 'package:frontend/presentation/screens/onboarding_screen.dart';
 
 class BetApp extends StatelessWidget {
   const BetApp({Key? key}) : super(key: key);
@@ -16,8 +17,9 @@ class BetApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'BetEbet',
-      initialRoute: '/login',
+      initialRoute: '/onboarding',
       routes: {
+        '/onboarding': (BuildContext contex) => OnboardingScreen(),
         '/login': (BuildContext context) => const LoginPage(),
         '/': (BuildContext context) => const HomePage(),
         '/register': (BuildContext context) => const RegistrationPage(),
