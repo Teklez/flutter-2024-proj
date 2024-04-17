@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/input_form.dart';
 import 'package:frontend/presentation/screens/login.dart';
 
-class Register extends StatelessWidget {
-  const Register({Key? key}) : super(key: key);
+class RegistrationPage extends StatelessWidget {
+  const RegistrationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,9 @@ class Register extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.red,
       ),
-      body: content(context),
+      body: SingleChildScrollView(
+        child: content(context),
+      ),
     );
   }
 

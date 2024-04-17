@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/model/game.dart';
 import 'package:frontend/presentation/screens/review.dart';
+import 'package:frontend/presentation/screens/game_add.dart';
+import 'package:frontend/presentation/widgets/dialogues.dart';
 
-class GameCard extends StatelessWidget {
+class AGameCard extends StatelessWidget {
   final Game game;
-  const GameCard({Key? key, required this.game}) : super(key: key);
+  const AGameCard({Key? key, required this.game}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.antiAlias,
-      elevation: 0.0,
+      elevation: 0.3,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -25,7 +27,7 @@ class GameCard extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 5.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
@@ -35,38 +37,27 @@ class GameCard extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
-                  const SizedBox(height: 1.0),
+                  Text(
+                    game.publisher,
+                    // style: theme.textTheme.labelLarge,
+                    softWrap: false,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(
-                        Icons.star,
-                        size: 16.0,
-                        color: Colors.yellow,
-                      ),
-                      const SizedBox(width: 8.0),
                       Text(
-                        '4.5',
-                        // style: theme.textTheme.labelSmall,
+                        game.releaseDate,
+                        // style: theme.textTheme.labelLarge,
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
                       ),
-                      SizedBox(
-                        width: 40,
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ReviewPage()),
-                          );
-                        },
-                        icon: Icon(
-                          Icons.arrow_forward,
-                          color: Colors.white,
-                          size: 20,
-                        ),
-                      )
+                      const EditDeleteDialogue(),
                     ],
                   ),
+                  const SizedBox(height: 1.0),
                 ],
               ),
             ),

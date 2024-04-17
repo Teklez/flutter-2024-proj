@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/custom_card.dart';
 import 'package:frontend/model/game.dart';
+import 'package:frontend/presentation/widgets/dialogues.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,15 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.menu,
-            semanticLabel: 'menu',
-          ),
-          onPressed: () {
-            print('Menu button');
-          },
-        ),
+        leading: const Menu(names: ["Home", "About", "Logout"]),
         actions: <Widget>[
           IconButton(
             icon: const Icon(

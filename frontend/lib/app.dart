@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'package:frontend/presentation/screens/game_add.dart';
 import 'package:frontend/presentation/screens/login.dart';
 import 'package:frontend/presentation/screens/home.dart';
+import 'package:frontend/presentation/screens/register.dart';
+import 'package:frontend/presentation/screens/admin_page.dart';
+import 'package:frontend/presentation/screens/review.dart';
 
 class BetApp extends StatelessWidget {
   const BetApp({Key? key}) : super(key: key);
@@ -14,8 +17,12 @@ class BetApp extends StatelessWidget {
       routes: {
         '/login': (BuildContext context) => const LoginPage(),
         '/': (BuildContext context) => const HomePage(),
-        '/register': (BuildContext context) => const HomePage(),
-        '/review': (BuildContext context) => const HomePage(),
+        '/register': (BuildContext context) => const RegistrationPage(),
+        '/review': (BuildContext context) => const ReviewPage(),
+        '/admin': (BuildContext context) => const AdminPage(),
+        '/add_game': (BuildContext context) => const AddGameForm(
+              buttonName: "Add",
+            ),
       },
       theme: ThemeData.dark(),
     );
