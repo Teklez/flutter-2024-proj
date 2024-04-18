@@ -30,7 +30,7 @@ class Review extends StatelessWidget {
             child: AspectRatio(
               aspectRatio: 14 / 14,
               child: Opacity(
-                opacity: 0.5,
+                opacity: 1,
                 child: Image.asset(
                   "assets/logo.jpg",
                   fit: BoxFit.fill,
@@ -143,13 +143,14 @@ class Review extends StatelessWidget {
                 child: TextField(
                     decoration: InputDecoration(
                   labelText: "Write your review here...",
+                  labelStyle: TextStyle(color: Colors.white),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Colors.blue),
                       borderRadius: BorderRadius.circular(10)),
-                  fillColor: Colors.grey.shade200,
+                  fillColor: Colors.black,
                   filled: true,
                 )),
               ),
