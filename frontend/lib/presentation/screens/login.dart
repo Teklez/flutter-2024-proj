@@ -8,11 +8,15 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-      ),
-      body: content(context),
-    );
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+        ),
+        body: SingleChildScrollView(
+          child: Container(
+            margin: EdgeInsets.only(bottom: 16.0),
+            child: content(context),
+          ),
+        ));
   }
 
   Widget content(BuildContext context) {
@@ -35,6 +39,7 @@ class LoginPage extends StatelessWidget {
                 child: const Icon(
                   Icons.person,
                   size: 50,
+                  color: Colors.red,
                 ),
               ),
             ),
@@ -99,6 +104,39 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 8.0,
+                ),
+                Center(
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 207, 102, 102),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(255, 132, 72, 72),
+                        shape: const RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0))),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, "/admin", (route) => false);
+                      },
+                      child: const Text(
+                        "Admin",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 const SizedBox(
                   height: 50,
                 ),
@@ -111,7 +149,7 @@ class LoginPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Register(),
+                            builder: (context) => RegistrationPage(),
                           ),
                         );
                       },

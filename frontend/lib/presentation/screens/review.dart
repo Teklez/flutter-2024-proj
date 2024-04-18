@@ -7,8 +7,8 @@ import 'package:frontend/presentation/widgets/rating.dart';
 import 'package:frontend/presentation/widgets/rating_Progress_Indicator.dart';
 import 'package:frontend/presentation/widgets/user_review_card.dart';
 
-class Review extends StatelessWidget {
-  const Review({Key? key}) : super(key: key);
+class ReviewPage extends StatelessWidget {
+  const ReviewPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

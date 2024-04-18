@@ -2,16 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/input_form.dart';
 import 'package:frontend/presentation/screens/login.dart';
 
-class Register extends StatelessWidget {
-  const Register({Key? key}) : super(key: key);
+class RegistrationPage extends StatelessWidget {
+  const RegistrationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green[700],
       ),
-      body: content(context),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.only(bottom: 16.0),
+          child: content(context),
+        ),
+      ),
     );
   }
 
@@ -21,7 +26,7 @@ class Register extends StatelessWidget {
         Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.red,
+            color: Colors.green[700],
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.elliptical(60, 60),
             ),
@@ -34,6 +39,7 @@ class Register extends StatelessWidget {
               child: Icon(
                 Icons.person,
                 size: 50,
+                color: Colors.green[700],
               ),
             ),
           ),
@@ -81,12 +87,12 @@ class Register extends StatelessWidget {
                   width: 200,
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Colors.redAccent,
+                    color: Colors.green,
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
+                      backgroundColor: Colors.green,
                       shape: RoundedRectangleBorder(
                           borderRadius:
                               BorderRadius.all(Radius.circular(10.0))),
@@ -121,7 +127,7 @@ class Register extends StatelessWidget {
                     },
                     child: Text(
                       "Login",
-                      style: TextStyle(color: Colors.red),
+                      style: TextStyle(color: Colors.green[700]),
                     ),
                   )
                 ],
