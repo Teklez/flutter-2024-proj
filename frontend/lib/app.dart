@@ -30,6 +30,7 @@ class BetApp extends StatelessWidget {
             ),
         '/about': (BuildContext context) => AboutPage(),
         '/users': (BuildContext context) => const UsersPage(),
+        '/home': (BuildContext context) => const HomePage(),
       },
       theme: ThemeData.dark(),
     );
