@@ -1,10 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:frontend/presentation/widgets/dialogues.dart';
 
 class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green[700],
+        leading: const Menu(names: [
+          ["Home", "/home"],
+          ["About", "/about"],
+          ["Logout", "/login"]
+        ]),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(
+              Icons.search,
+              semanticLabel: 'search',
+            ),
+            onPressed: () {
+              print('Search Button');
+            },
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.tune,
+              semanticLabel: 'filter',
+            ),
+            onPressed: () {
+              print('Filter Button');
+            },
+          )
+        ],
+        title: const Text("BetEbet"),
+      ),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(10),
