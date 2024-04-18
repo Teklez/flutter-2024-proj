@@ -7,23 +7,13 @@ class AddGameForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.menu,
-            semanticLabel: 'menu',
-          ),
-          onPressed: () {
-            print('Menu button');
-          },
-        ),
-        title: const Text("BetEbet"),
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
+    return Material(
+      child: Center(
+        child: Container(
           padding: const EdgeInsets.all(16.0),
-          child: _AddGameForm(context, buttonName),
+          child: Center(
+            child: _AddGameForm(context, buttonName),
+          ),
         ),
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/custom_card.dart';
 import 'package:frontend/model/game.dart';
 import 'package:frontend/presentation/widgets/dialogues.dart';
+import 'package:frontend/presentation/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,11 +12,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green[700],
-        leading: const Menu(names: [
-          ["Home", "/home"],
-          ["About", "/about"],
-          ["Logout", "/login"]
-        ]),
         actions: <Widget>[
           IconButton(
             icon: const Icon(
@@ -37,6 +33,13 @@ class HomePage extends StatelessWidget {
           )
         ],
         title: const Text("BetEbet"),
+      ),
+      drawer: const MenuDrawer(
+        menuItems: [
+          ["Home", "/"],
+          ["About", "/about"],
+          ["Logout", "/login"],
+        ],
       ),
       body: GridView.count(
         crossAxisCount: 2,

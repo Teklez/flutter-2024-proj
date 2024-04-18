@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/model/user.dart';
 import 'package:frontend/presentation/widgets/dialogues.dart';
+import 'package:frontend/presentation/widgets/drawer.dart';
 
 class UsersPage extends StatelessWidget {
   const UsersPage({super.key});
@@ -23,15 +24,13 @@ class UsersPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.green[700],
         title: const Text("BetEbet"),
-        leading: const Menu(
-          names: [
-            ["Home", '/admin'],
-            ["Users", '/users'],
-            ["Add Game", '/add_game'],
-            ["Logout", '/login']
-          ],
-        ),
       ),
+      drawer: const MenuDrawer(menuItems: [
+        ["Home", '/admin'],
+        ["Users", '/users'],
+        ["Add Game", '/add_game'],
+        ["Logout", '/login']
+      ]),
       body: ListView(
         padding: const EdgeInsets.all(8.0),
         children: _buildUserCard(users),

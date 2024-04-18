@@ -7,34 +7,13 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[700],
-        leading: const Menu(names: [
-          ["Home", "/home"],
-          ["About", "/about"],
-          ["Logout", "/login"]
-        ]),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.search,
-              semanticLabel: 'search',
-            ),
+          backgroundColor: Colors.green[700],
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
             onPressed: () {
-              print('Search Button');
+              Navigator.pushNamed(context, '/home');
             },
-          ),
-          IconButton(
-            icon: const Icon(
-              Icons.tune,
-              semanticLabel: 'filter',
-            ),
-            onPressed: () {
-              print('Filter Button');
-            },
-          )
-        ],
-        title: const Text("BetEbet"),
-      ),
+          )),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(10),

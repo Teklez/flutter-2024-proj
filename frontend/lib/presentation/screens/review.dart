@@ -22,34 +22,15 @@ class ReviewPage extends StatelessWidget {
   Widget content(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[700],
-        leading: const Menu(names: [
-          ["Home", "/home"],
-          ["About", "/about"],
-          ["Logout", "/login"]
-        ]),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.search,
-              semanticLabel: 'search',
-            ),
+          backgroundColor: Colors.green[700],
+          leading: IconButton(
             onPressed: () {
-              print('Search Button');
+              Navigator.pop(context);
             },
-          ),
-          IconButton(
-            icon: const Icon(
-              Icons.tune,
-              semanticLabel: 'filter',
+            icon: Icon(
+              Icons.home,
             ),
-            onPressed: () {
-              print('Filter Button');
-            },
-          )
-        ],
-        title: const Text("BetEbet"),
-      ),
+          )),
       backgroundColor: Colors.black,
       body: Stack(
         children: [
