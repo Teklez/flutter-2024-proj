@@ -58,7 +58,7 @@ class RegistrationPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
@@ -129,7 +129,7 @@ class RegistrationPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 50,
+                      height: 30,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

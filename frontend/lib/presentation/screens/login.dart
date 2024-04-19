@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 48, 1, 1),
+          backgroundColor: const Color.fromARGB(255, 68, 5, 1),
         ),
         body: content(context));
   }
@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
               Container(
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 48, 1, 1),
+                  color: const Color.fromARGB(255, 68, 5, 1),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.elliptical(60, 60),
                   ),
@@ -125,7 +125,7 @@ class LoginPage extends StatelessWidget {
                         width: 200,
                         height: 50,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 207, 102, 102),
+                          color: const Color.fromARGB(255, 68, 5, 1),
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: ElevatedButton(

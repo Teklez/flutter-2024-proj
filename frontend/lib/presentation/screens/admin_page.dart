@@ -11,7 +11,7 @@ class AdminPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[700],
+        backgroundColor: Color.fromARGB(255, 211, 47, 47),
         title: const Text("BetEbet"),
       ),
       drawer: const MenuDrawer(menuItems: [

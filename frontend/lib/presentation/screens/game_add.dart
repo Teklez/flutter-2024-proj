@@ -8,18 +8,17 @@ class AddGameForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Center(
-        child: Container(
-          padding: const EdgeInsets.all(16.0),
-          child: Center(
-            child: _AddGameForm(context, buttonName),
-          ),
+      child: Container(
+        margin: const EdgeInsets.only(top: 16.0),
+        padding: const EdgeInsets.all(18.0),
+        child: Center(
+          child: _addGameForm(context, buttonName),
         ),
       ),
     );
   }
 
-  _AddGameForm(context, buttonName) {
+  _addGameForm(context, buttonName) {
     return Column(
       children: [
         TextFormField(
@@ -72,8 +71,8 @@ class AddGameForm extends StatelessWidget {
                 // Add action
                 print('Add');
               },
-              child:
-                  Text(buttonName, style: TextStyle(color: Colors.green[700])),
+              child: Text(buttonName,
+                  style: TextStyle(color: Color.fromARGB(255, 211, 47, 47))),
             ),
           ],
         ),

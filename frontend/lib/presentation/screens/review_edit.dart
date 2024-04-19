@@ -50,7 +50,9 @@ class ReviewEdit extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const RatingStar(),
+                  const RatingStar(
+                    rating: 3,
+                  ),
                   const SizedBox(
                     width: 10,
                   ),
@@ -95,7 +97,9 @@ class ReviewEdit extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   children: [
-                    RatingStar(),
+                    RatingStar(
+                      rating: 2,
+                    ),
                     SizedBox(
                       height: 10,
                     ),

@@ -8,6 +8,7 @@ import 'package:frontend/presentation/screens/admin_page.dart';
 import 'package:frontend/presentation/screens/review.dart';
 import 'package:frontend/presentation/screens/review_add.dart';
 import 'package:frontend/presentation/screens/review_edit.dart';
+import 'package:frontend/presentation/screens/search.dart';
 import 'package:frontend/presentation/screens/users.dart';
 import 'package:frontend/presentation/screens/onboarding_screen.dart';
 
@@ -33,6 +34,7 @@ class BetApp extends StatelessWidget {
         '/about': (BuildContext context) => AboutPage(),
         '/users': (BuildContext context) => const UsersPage(),
         '/home': (BuildContext context) => const HomePage(),
+        '/search': (BuildContext context) => const SearchPage(),
         '/review-edit': (BuildContext context) => ReviewEdit(),
         '/review-add': (BuildContext context) => ReviewAdd(),
       },

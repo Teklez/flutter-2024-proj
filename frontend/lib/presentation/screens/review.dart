@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:frontend/presentation/widgets/rating.dart';
 import 'package:frontend/presentation/widgets/rating_Progress_Indicator.dart';
 import 'package:frontend/presentation/widgets/user_review_card.dart';
@@ -19,7 +16,7 @@ class ReviewPage extends StatelessWidget {
   Widget content(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.green[700],
+          backgroundColor: Colors.black,
           leading: IconButton(
             onPressed: () {
               Navigator.pushNamed(context, '/home');
@@ -100,7 +97,10 @@ class ReviewPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const RatingStar(),
+                  const RatingStar(
+                    rating: 4.5,
+                    //later use backend
+                  ),
                   Text(
                     "12,345",
                     style: TextStyle(
@@ -166,7 +166,9 @@ class ReviewPage extends StatelessWidget {
                                     SizedBox(
                                       width: 110,
                                     ),
-                                    RatingStar(),
+                                    RatingStar(
+                                      rating: 5,
+                                    ),
                                   ],
                                 ),
                                 SizedBox(

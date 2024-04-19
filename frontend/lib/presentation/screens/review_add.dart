@@ -35,7 +35,9 @@ class ReviewAdd extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   children: [
-                    const RatingStar(),
+                    const RatingStar(
+                      rating: 3,
+                    ),
                     const SizedBox(
                       height: 10,
                     ),
