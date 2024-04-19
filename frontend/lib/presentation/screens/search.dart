@@ -91,6 +91,7 @@ class SearchPage extends StatelessWidget {
           ),
           Icon(
             Icons.star,
+            color: Colors.yellow,
           ), // Replace with actual rating logic
         ],
       ),

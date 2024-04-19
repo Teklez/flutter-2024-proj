@@ -110,7 +110,7 @@ class OnboardingPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: Color.fromARGB(255, 211, 47, 47),
       child: Center(
         child: Container(
           padding: EdgeInsets.all(10),

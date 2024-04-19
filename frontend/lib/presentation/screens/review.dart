@@ -18,7 +18,7 @@ class ReviewPage extends StatelessWidget {
   Widget content(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.green[700],
+          backgroundColor: Colors.black,
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
@@ -98,7 +98,10 @@ class ReviewPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const RatingStar(),
+                  const RatingStar(
+                    rating: 4.5,
+                    //later use backend
+                  ),
                   Text(
                     "12,345",
                     style: TextStyle(

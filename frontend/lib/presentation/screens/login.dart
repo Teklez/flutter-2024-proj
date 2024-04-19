@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Color.fromARGB(255, 211, 47, 47),
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget {
           Container(
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: Colors.red,
+              color: Color.fromARGB(255, 211, 47, 47),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.elliptical(60, 60),
               ),
@@ -39,7 +39,7 @@ class LoginPage extends StatelessWidget {
                 child: const Icon(
                   Icons.person,
                   size: 50,
-                  color: Colors.red,
+                  color: Color.fromARGB(255, 211, 47, 47),
                 ),
               ),
             ),
@@ -79,12 +79,12 @@ class LoginPage extends StatelessWidget {
                     width: 200,
                     height: 50,
                     decoration: BoxDecoration(
-                      color: Colors.redAccent,
+                      color: Color.fromARGB(255, 211, 47, 47),
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.redAccent,
+                        backgroundColor: Color.fromARGB(255, 211, 47, 47),
                         shape: const RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10.0))),
@@ -155,7 +155,8 @@ class LoginPage extends StatelessWidget {
                       },
                       child: const Text(
                         "Sign Up",
-                        style: TextStyle(color: Colors.red),
+                        style:
+                            TextStyle(color: Color.fromARGB(255, 211, 47, 47)),
                       ),
                     )
                   ],

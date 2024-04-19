@@ -71,8 +71,8 @@ class AddGameForm extends StatelessWidget {
                 // Add action
                 print('Add');
               },
-              child:
-                  Text(buttonName, style: TextStyle(color: Colors.green[700])),
+              child: Text(buttonName,
+                  style: TextStyle(color: Color.fromARGB(255, 211, 47, 47))),
             ),
           ],
         ),
