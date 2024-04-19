@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
               semanticLabel: 'search',
             ),
             onPressed: () {
-              print('Search Button');
+              Navigator.pushNamed(context, '/search');
             },
           ),
           IconButton(

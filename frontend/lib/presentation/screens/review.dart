@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:frontend/presentation/widgets/dialogues.dart';
 import 'package:frontend/presentation/widgets/rating.dart';
 import 'package:frontend/presentation/widgets/rating_Progress_Indicator.dart';

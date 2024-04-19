@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class MenuDrawer extends StatelessWidget {
   final List<List<String>> menuItems;
@@ -13,9 +15,16 @@ class MenuDrawer extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.green[700],
+                image: DecorationImage(
+                  image: const AssetImage('assets/logo.jpg'),
+                  fit: BoxFit.cover,
+                  opacity: 0.3,
+                  colorFilter: ColorFilter.mode(
+                      Color.fromARGB(255, 18, 18, 18).withOpacity(0.5),
+                      BlendMode.dstATop),
+                ),
               ),
-              child: const Text('Menu'),
+              child: const Text('BetEbet'),
             ),
             ..._buildTile(menuItems, context)
           ],
