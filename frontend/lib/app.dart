@@ -6,8 +6,10 @@ import 'package:frontend/presentation/screens/home.dart';
 import 'package:frontend/presentation/screens/register.dart';
 import 'package:frontend/presentation/screens/admin_page.dart';
 import 'package:frontend/presentation/screens/review.dart';
+import 'package:frontend/presentation/screens/review_edit.dart';
 import 'package:frontend/presentation/screens/users.dart';
 import 'package:frontend/presentation/screens/onboarding_screen.dart';
+import 'package:frontend/presentation/widgets/user_review_card.dart';
 
 class BetApp extends StatelessWidget {
   const BetApp({Key? key}) : super(key: key);
@@ -30,6 +32,7 @@ class BetApp extends StatelessWidget {
             ),
         '/about': (BuildContext context) => AboutPage(),
         '/users': (BuildContext context) => const UsersPage(),
+        '/review_edit': (BuildContext context) => ReviewEdit(),
       },
       theme: ThemeData.dark(),
     );

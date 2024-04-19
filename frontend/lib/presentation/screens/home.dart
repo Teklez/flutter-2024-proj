@@ -10,9 +10,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[700],
+        backgroundColor: Colors.black,
         leading: const Menu(names: [
-          ["Home", "/home"],
+          ["Home", "/"],
           ["About", "/about"],
           ["Logout", "/login"]
         ]),
@@ -36,7 +36,10 @@ class HomePage extends StatelessWidget {
             },
           )
         ],
-        title: const Text("BetEbet"),
+        title: const Text(
+          "BetEbet",
+          style: TextStyle(color: Colors.amber),
+        ),
       ),
       body: GridView.count(
         crossAxisCount: 2,

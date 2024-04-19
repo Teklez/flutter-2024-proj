@@ -29,7 +29,10 @@ class UserReview extends StatelessWidget {
                         color: Colors.grey[350])),
               ],
             ),
-            Edit_Delete_PopUps()
+            Edit_Delete_PopUps(
+              text1: "Edit",
+              text2: "Delete",
+            )
           ],
         ),
         const SizedBox(
@@ -55,7 +58,7 @@ class UserReview extends StatelessWidget {
         ),
         const ReadMoreText(
           'The user interface of the app is quite intuitive, I was able to navigate and make play seamlesssly. Great job! ',
-          trimLines: 1,
+          trimLines: 5,
           style: const TextStyle(color: Colors.white),
           trimMode: TrimMode.Line,
           trimExpandedText: "show less",
@@ -98,7 +101,7 @@ class UserReview extends StatelessWidget {
                 ),
                 ReadMoreText(
                   'The user interface of the app is quite intuitive, I was able to navigate and make play seamlesssly. Great job! ',
-                  trimLines: 1,
+                  trimLines: 5,
                   style: TextStyle(color: Colors.grey[200]),
                   trimMode: TrimMode.Line,
                   trimExpandedText: "show less",

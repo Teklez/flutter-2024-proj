@@ -14,6 +14,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       body: Stack(
         children: [
+          ColorFiltered(
+            colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.2),
+              BlendMode.dstATop,
+            ),
+            child: Container(
+              width: double.infinity,
+              height: double.infinity,
+              child: Image.asset(
+                'assets/RussianRoulette.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
           PageView(
             controller: _pageController,
             onPageChanged: (index) {
@@ -69,7 +83,6 @@ class OnboardingPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
       child: Center(
         child: Container(
           padding: EdgeInsets.all(10),
@@ -110,7 +123,6 @@ class OnboardingPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
       child: Center(
         child: Container(
           padding: EdgeInsets.all(10),

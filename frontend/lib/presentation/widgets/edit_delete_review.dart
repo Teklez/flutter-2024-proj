@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/presentation/widgets/user_review_card.dart';
 
 class Edit_Delete_PopUps extends StatelessWidget {
-  const Edit_Delete_PopUps({
-    Key? key,
-  }) : super(key: key);
+  final String text1;
+  final String text2;
+  const Edit_Delete_PopUps(
+      {super.key, required this.text1, required this.text2});
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +22,12 @@ class Edit_Delete_PopUps extends StatelessWidget {
               const Icon(Icons.edit, color: Colors.white),
               Container(
                 margin: const EdgeInsets.only(left: 10),
-                child: const Text("Edit"),
+                child: Text(text1),
               ),
             ],
           ),
           onTap: () async {
-            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              content: Text('Edit'),
-            ));
+            Navigator.pushNamed(context, "/review_edit");
           },
         ),
         PopupMenuItem(
@@ -36,7 +36,7 @@ class Edit_Delete_PopUps extends StatelessWidget {
               const Icon(Icons.delete, color: Colors.white),
               Container(
                 margin: const EdgeInsets.only(left: 10),
-                child: Text("Delete"),
+                child: Text(text2),
               ),
             ],
           ),

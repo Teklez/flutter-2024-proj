@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:frontend/presentation/widgets/dialogues.dart';
 
 class AddGameForm extends StatelessWidget {
   final String buttonName;
@@ -9,14 +10,13 @@ class AddGameForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.menu,
-            semanticLabel: 'menu',
-          ),
-          onPressed: () {
-            print('Menu button');
-          },
+        leading: const Menu(
+          names: [
+            ["Home", '/admin'],
+            ["Users", '/users'],
+            ["Add Game", '/add_game'],
+            ["Logout", '/login']
+          ],
         ),
         title: const Text("BetEbet"),
       ),

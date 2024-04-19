@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/model/game.dart';
-import 'package:frontend/presentation/screens/review.dart';
-import 'package:frontend/presentation/screens/game_add.dart';
+
 import 'package:frontend/presentation/widgets/dialogues.dart';
 
 class AGameCard extends StatelessWidget {
