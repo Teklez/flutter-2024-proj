@@ -1,13 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:frontend/presentation/widgets/dialogues.dart';
+
 
 class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.green[700],
+          backgroundColor: Color.fromARGB(255, 211, 47, 47),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -125,11 +126,15 @@ class AboutPage extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
               Center(
                 child: Container(
                   padding:
                       EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
                     color: Colors.black,
                   ),
                   child: Text(
@@ -140,6 +145,9 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 8,
               ),
               Container(
                 //edit the color
@@ -268,15 +276,17 @@ class AboutPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey, width: 1.0),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Text('24/7 support'),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey, width: 1.0),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Text('24/7 support'),
+                          ),
                         ),
                       ),
                     ),

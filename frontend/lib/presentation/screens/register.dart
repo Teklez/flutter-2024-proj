@@ -9,133 +9,157 @@ class RegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[700],
+        backgroundColor: const Color.fromARGB(255, 68, 5, 1),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          margin: EdgeInsets.only(bottom: 16.0),
-          child: content(context),
-        ),
-      ),
+      body: content(context),
     );
   }
 
   Widget content(BuildContext context) {
-    return Column(
+    return Scaffold(
+        body: Stack(
       children: [
-        Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.green[700],
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.elliptical(60, 60),
-            ),
+        ColorFiltered(
+          colorFilter: ColorFilter.mode(
+            Colors.black.withOpacity(0.3),
+            BlendMode.dstATop,
           ),
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 20.0),
-            child: Container(
-              decoration:
-                  BoxDecoration(shape: BoxShape.circle, color: Colors.white),
-              child: Icon(
-                Icons.person,
-                size: 50,
-                color: Colors.green[700],
-              ),
+          child: Container(
+            width: double.infinity,
+            height: double.infinity,
+            child: Image.asset(
+              'assets/pexels-raka-miftah-4253690.jpg',
+              fit: BoxFit.cover,
             ),
           ),
         ),
-        SizedBox(
-          height: 40,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40.0),
+        SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Welcome",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Sign up to continue.",
-                style: TextStyle(fontSize: 20),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              inputForm("User Name"),
-              SizedBox(
-                height: 20,
-              ),
-              inputForm("Email"),
-              SizedBox(
-                height: 20,
-              ),
-              inputForm("Password"),
-              SizedBox(
-                height: 20,
-              ),
-              inputForm("Confirm Password"),
-              SizedBox(
-                height: 50,
-              ),
-              Center(
-                child: Container(
-                  width: 200,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(25),
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 68, 5, 1),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.elliptical(60, 60),
                   ),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green,
-                      shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(10.0))),
-                    ),
-                    onPressed: () {},
-                    child: Text(
-                      "Sign up",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    child: Icon(
+                      Icons.person,
+                      size: 50,
+                      color: Color.fromARGB(255, 59, 2, 2),
                     ),
                   ),
                 ),
               ),
-              SizedBox(
-                height: 50,
+              const SizedBox(
+                height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Already have an account? "),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginPage(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      "Login",
-                      style: TextStyle(color: Colors.green[700]),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Welcome to BetEbet",
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFFFFD700)),
                     ),
-                  )
-                ],
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Text(
+                      "Sign up to continue.",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    inputForm("User Name"),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    inputForm("Email"),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    inputForm("Password"),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    inputForm("Confirm Password"),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Center(
+                      child: Container(
+                        width: 200,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                const Color.fromARGB(255, 68, 5, 1),
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0))),
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/');
+                          },
+                          child: const Text(
+                            "Sign up",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text("Already have an account? "),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LoginPage(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            "Login",
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Color.fromARGB(255, 221, 4, 4)),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               )
             ],
           ),
         )
       ],
-    );
+    ));
   }
 }

@@ -64,15 +64,18 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(0),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: PopupMenuButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(3),
+        ),
+        clipBehavior: Clip.none,
+        position: PopupMenuPosition.under,
+        child: const Icon(Icons.menu),
+        itemBuilder: (context) => _buildMenu(names, context),
+        color: Colors.black,
       ),
-      clipBehavior: Clip.none,
-      position: PopupMenuPosition.under,
-      child: const Icon(Icons.menu),
-      itemBuilder: (context) => _buildMenu(names, context),
-      color: Colors.green[700],
     );
   }
 }

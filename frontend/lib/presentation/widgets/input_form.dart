@@ -4,7 +4,10 @@ Widget inputForm(String title) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(title),
+      Text(
+        title,
+        style: TextStyle(color: Colors.white),
+      ),
       const SizedBox(
         height: 10,
       ),

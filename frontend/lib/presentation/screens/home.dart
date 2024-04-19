@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/custom_card.dart';
 import 'package:frontend/model/game.dart';
-import 'package:frontend/presentation/widgets/dialogues.dart';
+
 import 'package:frontend/presentation/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[700],
+        backgroundColor: Color.fromARGB(255, 211, 47, 47),
         actions: <Widget>[
           IconButton(
             icon: const Icon(
@@ -32,7 +32,10 @@ class HomePage extends StatelessWidget {
             },
           )
         ],
-        title: const Text("BetEbet"),
+        title: const Text(
+          "BetEbet",
+          style: TextStyle(color: Colors.amber),
+        ),
       ),
       drawer: const MenuDrawer(
         menuItems: [

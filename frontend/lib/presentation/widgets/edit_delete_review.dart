@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Edit_Delete_PopUps extends StatelessWidget {
-  const Edit_Delete_PopUps({
-    Key? key,
-  }) : super(key: key);
+  const Edit_Delete_PopUps({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +23,7 @@ class Edit_Delete_PopUps extends StatelessWidget {
             ],
           ),
           onTap: () async {
-            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              content: Text('Edit'),
-            ));
+            Navigator.pushNamed(context, "/review-edit");
           },
         ),
         PopupMenuItem(
@@ -36,7 +32,7 @@ class Edit_Delete_PopUps extends StatelessWidget {
               const Icon(Icons.delete, color: Colors.white),
               Container(
                 margin: const EdgeInsets.only(left: 10),
-                child: Text("Delete"),
+                child: const Text('Delete'),
               ),
             ],
           ),
@@ -45,20 +41,21 @@ class Edit_Delete_PopUps extends StatelessWidget {
               context: context,
               builder: (BuildContext context) {
                 return AlertDialog(
-                  title: Text("Confirm Delete"),
-                  content: Text("Are you sure you want to delete this review?"),
+                  title: const Text("Confirm Delete"),
+                  content: const Text(
+                      "Are you sure you want to delete this review?"),
                   actions: [
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pop(false);
                       },
-                      child: Text("Cancel"),
+                      child: const Text("Cancel"),
                     ),
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pop(true);
                       },
-                      child: Text("Delete"),
+                      child: const Text("Delete"),
                     ),
                   ],
                 );

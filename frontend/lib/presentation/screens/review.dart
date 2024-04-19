@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/presentation/widgets/dialogues.dart';
 import 'package:frontend/presentation/widgets/rating.dart';
 import 'package:frontend/presentation/widgets/rating_Progress_Indicator.dart';
 import 'package:frontend/presentation/widgets/user_review_card.dart';
-import 'package:frontend/presentation/widgets/rating_page.dart';
 
 class ReviewPage extends StatelessWidget {
   const ReviewPage({Key? key}) : super(key: key);
@@ -18,12 +16,12 @@ class ReviewPage extends StatelessWidget {
   Widget content(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.green[700],
+          backgroundColor: Colors.black,
           leading: IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/home');
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.home,
             ),
           )),
@@ -57,6 +55,7 @@ class ReviewPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Expanded(
                         flex: 3,
@@ -98,7 +97,10 @@ class ReviewPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const RatingStar(),
+                  const RatingStar(
+                    rating: 4.5,
+                    //later use backend
+                  ),
                   Text(
                     "12,345",
                     style: TextStyle(
@@ -110,7 +112,7 @@ class ReviewPage extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     'Rate this app',
                     style: TextStyle(
                       fontSize: 24,
@@ -119,23 +121,70 @@ class ReviewPage extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     'Share you experience with us',
                     style: TextStyle(
                       fontSize: 16,
                     ),
                   ),
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        StarIcon(),
-                        StarIcon(),
-                        StarIcon(),
-                        StarIcon(),
-                        StarIcon(),
-                      ],
-                    ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/review-add');
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade500,
+                                      offset: const Offset(2.0, 2.0),
+                                      blurRadius: 5.0,
+                                      spreadRadius: 1.0),
+                                  const BoxShadow(
+                                      color: Colors.white,
+                                      offset: Offset(-1.0, -1.0),
+                                      blurRadius: 5.0,
+                                      spreadRadius: 1.0)
+                                ],
+                                color: const Color.fromARGB(255, 76, 71, 71)),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 110,
+                                    ),
+                                    RatingStar(
+                                      rating: 5,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "What do you think of this Game?",
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ],
+                            ),
+                            height: 90,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   const SizedBox(
                     height: 20,
@@ -150,45 +199,6 @@ class ReviewPage extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class StarIcon extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      icon: Icon(Icons.star),
-      onPressed: () {
-        showDialog(
-          context: context,
-          builder: (BuildContext context) {
-            return Dialog(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: IconButton(
-                        icon: Icon(Icons.close),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: RatingForm(),
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
     );
   }
 }

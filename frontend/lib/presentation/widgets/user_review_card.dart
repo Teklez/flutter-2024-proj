@@ -37,7 +37,8 @@ class UserReview extends StatelessWidget {
         ),
         Row(
           children: [
-            const RatingStar(),
+            const RatingStar(rating: 4.5),
+            //later use backend
             const SizedBox(
               width: 10,
             ),
@@ -55,15 +56,19 @@ class UserReview extends StatelessWidget {
         ),
         const ReadMoreText(
           'The user interface of the app is quite intuitive, I was able to navigate and make play seamlesssly. Great job! ',
-          trimLines: 1,
+          trimLines: 5,
           style: const TextStyle(color: Colors.white),
           trimMode: TrimMode.Line,
           trimExpandedText: "show less",
           trimCollapsedText: "show more",
           moreStyle: TextStyle(
-              fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue),
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Colors.redAccent),
           lessStyle: TextStyle(
-              fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue),
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Colors.redAccent),
         ),
         const SizedBox(
           height: 10,
@@ -98,7 +103,7 @@ class UserReview extends StatelessWidget {
                 ),
                 ReadMoreText(
                   'The user interface of the app is quite intuitive, I was able to navigate and make play seamlesssly. Great job! ',
-                  trimLines: 1,
+                  trimLines: 5,
                   style: TextStyle(color: Colors.grey[200]),
                   trimMode: TrimMode.Line,
                   trimExpandedText: "show less",
@@ -106,11 +111,11 @@ class UserReview extends StatelessWidget {
                   moreStyle: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue),
+                      color: Colors.redAccent),
                   lessStyle: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue),
+                      color: Colors.redAccent),
                 ),
               ],
             ),
