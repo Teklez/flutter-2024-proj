@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -150,8 +149,21 @@ class AboutPage extends StatelessWidget {
                 height: 8,
               ),
               Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2.0,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
                 //edit the color
-                color: Color.fromARGB(255, 223, 207, 207),
+
                 padding: EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -160,7 +172,7 @@ class AboutPage extends StatelessWidget {
                       child: Text(
                         'What games do we have?',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -172,37 +184,37 @@ class AboutPage extends StatelessWidget {
                         Text(
                           "Dice:  Rolling the dice, chance takes hold as possibilities unfold.",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                         ),
                         Text(
                           "Blackjack: The game of strategy and chance, where the goal is to reach twenty-one",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                         ),
                         Text(
                           "Roulette:  A dangerous game of chance, where life hangs on the spin of a deadly chamber.",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                         ),
                         Text(
                           "Slots: The thrilling game of spinning reels, where luck and anticipation collide for a chance at winning big",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                         ),
                         Text(
                           "Craps:  The exhilarating dice game where the roll of the dice can determine your fate at the table.",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                         ),
                         Text(
                           "Pocker: The captivating game of skill and strategy, where players bluff, bet, and compete for the ultimate hand",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                         ),
                       ],

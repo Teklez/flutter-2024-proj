@@ -11,6 +11,7 @@ import 'package:frontend/presentation/screens/review_edit.dart';
 import 'package:frontend/presentation/screens/search.dart';
 import 'package:frontend/presentation/screens/users.dart';
 import 'package:frontend/presentation/screens/onboarding_screen.dart';
+import 'package:frontend/presentation/widgets/rating_page.dart';
 
 class BetApp extends StatelessWidget {
   const BetApp({Key? key}) : super(key: key);
@@ -36,7 +37,7 @@ class BetApp extends StatelessWidget {
         '/home': (BuildContext context) => const HomePage(),
         '/search': (BuildContext context) => const SearchPage(),
         '/review-edit': (BuildContext context) => ReviewEdit(),
-        '/review-add': (BuildContext context) => ReviewAdd(),
+        '/review-page': (BuildContext context) => RatingForm(),
       },
       theme: ThemeData.dark(),
     );

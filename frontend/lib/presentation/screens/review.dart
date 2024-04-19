@@ -136,9 +136,10 @@ class ReviewPage extends StatelessWidget {
                       Expanded(
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, '/review-add');
+                            Navigator.pushNamed(context, '/review-page');
                           },
                           child: Container(
+                            padding: EdgeInsets.all(8.0),
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
@@ -156,27 +157,30 @@ class ReviewPage extends StatelessWidget {
                                 ],
                                 color: const Color.fromARGB(255, 76, 71, 71)),
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 110,
-                                    ),
-                                    RatingStar(
-                                      rating: 5,
-                                    ),
-                                  ],
-                                ),
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Text(
                                   "What do you think of this Game?",
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Center(
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 110,
+                                      ),
+                                      RatingStar(
+                                        rating: 0,
+                                        style: TextStyle(fontSize: 24),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -198,6 +202,31 @@ class ReviewPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class RatingStar extends StatelessWidget {
+  final double rating;
+  final TextStyle? style;
+
+  const RatingStar({
+    Key? key,
+    required this.rating,
+    this.style,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: List.generate(
+        5,
+        (index) => Icon(
+          Icons.star,
+          color: index < rating.round() ? Colors.amber : Colors.grey,
+          size: style?.fontSize ?? 16,
+        ),
       ),
     );
   }

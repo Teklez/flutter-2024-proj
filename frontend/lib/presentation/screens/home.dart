@@ -34,7 +34,6 @@ class HomePage extends StatelessWidget {
         ],
         title: const Text(
           "BetEbet",
-          style: TextStyle(color: Colors.amber),
         ),
       ),
       drawer: const MenuDrawer(

@@ -8,11 +8,13 @@ class RegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 68, 5, 1),
-      ),
-      body: content(context),
-    );
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 211, 47, 47),
+        ),
+        body: Container(
+          margin: EdgeInsets.only(bottom: 20.0),
+          child: content(context),
+        ));
   }
 
   Widget content(BuildContext context) {
@@ -39,7 +41,7 @@ class RegistrationPage extends StatelessWidget {
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 68, 5, 1),
+                  color: const Color.fromARGB(255, 211, 47, 47),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.elliptical(60, 60),
                   ),
@@ -68,9 +70,9 @@ class RegistrationPage extends StatelessWidget {
                     const Text(
                       "Welcome to BetEbet",
                       style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFFFD700)),
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
@@ -109,7 +111,7 @@ class RegistrationPage extends StatelessWidget {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor:
-                                const Color.fromARGB(255, 68, 5, 1),
+                                const Color.fromARGB(255, 211, 47, 47),
                             shape: RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10.0))),

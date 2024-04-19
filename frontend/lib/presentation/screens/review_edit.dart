@@ -11,7 +11,7 @@ class ReviewEdit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Editar review'),
+        title: Text('Edit your review'),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
