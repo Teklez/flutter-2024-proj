@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:frontend/presentation/widgets/edit_delete_review.dart';
+
 import 'package:frontend/presentation/widgets/rating.dart';
 
 import 'package:readmore/readmore.dart';
@@ -104,11 +104,15 @@ class ReviewEdit extends StatelessWidget {
                         Expanded(
                           child: TextField(
                               decoration: InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(
+                                vertical: 45.0, horizontal: 20.0),
                             labelText: "Write your review here...",
                             labelStyle: TextStyle(color: Colors.white),
                             enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(
+                                    color: const Color.fromARGB(
+                                        255, 108, 187, 252))),
                             focusedBorder: OutlineInputBorder(
                                 borderSide:
                                     const BorderSide(color: Colors.blue),
@@ -123,7 +127,7 @@ class ReviewEdit extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.blue),
                           child: const Text(
-                            'Submit',
+                            'Edit',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:frontend/presentation/widgets/dialogues.dart';
 
 class AddGameForm extends StatelessWidget {
   final String buttonName;
@@ -8,22 +7,13 @@ class AddGameForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: const Menu(
-          names: [
-            ["Home", '/admin'],
-            ["Users", '/users'],
-            ["Add Game", '/add_game'],
-            ["Logout", '/login']
-          ],
-        ),
-        title: const Text("BetEbet"),
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
+    return Material(
+      child: Center(
+        child: Container(
           padding: const EdgeInsets.all(16.0),
-          child: _AddGameForm(context, buttonName),
+          child: Center(
+            child: _AddGameForm(context, buttonName),
+          ),
         ),
       ),
     );

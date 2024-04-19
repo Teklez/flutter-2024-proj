@@ -29,10 +29,7 @@ class UserReview extends StatelessWidget {
                         color: Colors.grey[350])),
               ],
             ),
-            Edit_Delete_PopUps(
-              text1: "Edit",
-              text2: "Delete",
-            )
+            Edit_Delete_PopUps()
           ],
         ),
         const SizedBox(

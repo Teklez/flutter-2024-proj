@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/presentation/widgets/user_review_card.dart';
 
 class Edit_Delete_PopUps extends StatelessWidget {
-  final String text1;
-  final String text2;
-  const Edit_Delete_PopUps(
-      {super.key, required this.text1, required this.text2});
+  const Edit_Delete_PopUps({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +18,12 @@ class Edit_Delete_PopUps extends StatelessWidget {
               const Icon(Icons.edit, color: Colors.white),
               Container(
                 margin: const EdgeInsets.only(left: 10),
-                child: Text(text1),
+                child: const Text("Edit"),
               ),
             ],
           ),
           onTap: () async {
-            Navigator.pushNamed(context, "/review_edit");
+            Navigator.pushNamed(context, "/review-edit");
           },
         ),
         PopupMenuItem(
@@ -36,7 +32,7 @@ class Edit_Delete_PopUps extends StatelessWidget {
               const Icon(Icons.delete, color: Colors.white),
               Container(
                 margin: const EdgeInsets.only(left: 10),
-                child: Text(text2),
+                child: const Text('Delete'),
               ),
             ],
           ),
@@ -45,20 +41,21 @@ class Edit_Delete_PopUps extends StatelessWidget {
               context: context,
               builder: (BuildContext context) {
                 return AlertDialog(
-                  title: Text("Confirm Delete"),
-                  content: Text("Are you sure you want to delete this review?"),
+                  title: const Text("Confirm Delete"),
+                  content: const Text(
+                      "Are you sure you want to delete this review?"),
                   actions: [
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pop(false);
                       },
-                      child: Text("Cancel"),
+                      child: const Text("Cancel"),
                     ),
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pop(true);
                       },
-                      child: Text("Delete"),
+                      child: const Text("Delete"),
                     ),
                   ],
                 );

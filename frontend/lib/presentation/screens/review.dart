@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:frontend/presentation/widgets/dialogues.dart';
 import 'package:frontend/presentation/widgets/rating.dart';
 import 'package:frontend/presentation/widgets/rating_Progress_Indicator.dart';
 import 'package:frontend/presentation/widgets/user_review_card.dart';
@@ -13,38 +12,25 @@ class ReviewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: const Menu(names: [
-          ["Home", "/"],
-          ["About", "/about"],
-          ["Logout", "/login"]
-        ]),
-        backgroundColor: Colors.black,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: AspectRatio(
-              aspectRatio: 14 / 14,
-              child: Opacity(
-                opacity: 1,
-                child: Image.asset(
-                  "assets/logo.jpg",
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ),
-        ],
-        title: const Text("Reviews & Ratings"),
-      ),
       body: content(context),
     );
   }
 
   Widget content(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
-        body: Stack(children: [
+      appBar: AppBar(
+          backgroundColor: Colors.green[700],
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/home');
+            },
+            icon: const Icon(
+              Icons.home,
+            ),
+          )),
+      backgroundColor: Colors.black,
+      body: Stack(
+        children: [
           ColorFiltered(
             colorFilter: ColorFilter.mode(
               Colors.black.withOpacity(0.2),
@@ -61,106 +47,156 @@ class ReviewPage extends StatelessWidget {
           ),
           SingleChildScrollView(
             child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Ratings and reviews are verified and are from people who use the same type of device that you use.",
+                    style: TextStyle(color: Colors.grey[200]),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        "Ratings and reviews are verified and are from people who use the same type of device that you use.",
-                        style: TextStyle(color: Colors.grey[200]),
-                      ),
-                      const SizedBox(height: 20),
-                      Row(
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: Text(
-                              "4.8",
-                              style: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey[350]),
-                            ),
+                      Expanded(
+                        flex: 3,
+                        child: Text(
+                          "4.8",
+                          style: TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey[350],
                           ),
-                          const Expanded(
-                            flex: 7,
+                        ),
+                      ),
+                      const Expanded(
+                        flex: 7,
+                        child: Column(
+                          children: [
+                            RatingProgressIndicator(
+                              text: "5",
+                              value: 1.0,
+                            ),
+                            RatingProgressIndicator(
+                              text: "4",
+                              value: 0.8,
+                            ),
+                            RatingProgressIndicator(
+                              text: "3",
+                              value: 0.6,
+                            ),
+                            RatingProgressIndicator(
+                              text: "2",
+                              value: 0.4,
+                            ),
+                            RatingProgressIndicator(
+                              text: "1",
+                              value: 0.8,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const RatingStar(),
+                  Text(
+                    "12,345",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[200],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    'Rate this app',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    'Share you experience with us',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/review-add');
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade500,
+                                      offset: const Offset(2.0, 2.0),
+                                      blurRadius: 5.0,
+                                      spreadRadius: 1.0),
+                                  const BoxShadow(
+                                      color: Colors.white,
+                                      offset: Offset(-1.0, -1.0),
+                                      blurRadius: 5.0,
+                                      spreadRadius: 1.0)
+                                ],
+                                color: const Color.fromARGB(255, 76, 71, 71)),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                RatingProgressIndicator(
-                                  text: "5",
-                                  value: 1.0,
+                                SizedBox(
+                                  height: 10,
                                 ),
-                                RatingProgressIndicator(
-                                  text: "4",
-                                  value: 0.8,
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 110,
+                                    ),
+                                    RatingStar(),
+                                  ],
                                 ),
-                                RatingProgressIndicator(
-                                  text: "3",
-                                  value: 0.6,
+                                SizedBox(
+                                  height: 10,
                                 ),
-                                RatingProgressIndicator(
-                                  text: "2",
-                                  value: 0.4,
-                                ),
-                                RatingProgressIndicator(
-                                  text: "1",
-                                  value: 0.8,
+                                Text(
+                                  "What do you think of this Game?",
+                                  style: TextStyle(fontSize: 20),
                                 ),
                               ],
                             ),
-                          )
-                        ],
+                            height: 90,
+                          ),
+                        ),
                       ),
-                      const RatingStar(),
-                      Text(
-                        "12,345",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey[200]),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      UserReview(),
-                      UserReview(),
-                      UserReview(),
-                    ])),
-          ),
-        ]),
-        bottomNavigationBar: Container(
-          decoration: BoxDecoration(
-              color: Colors.black, borderRadius: BorderRadius.circular(8)),
-          padding: const EdgeInsets.all(5),
-          child: Row(
-            children: [
-              Expanded(
-                child: TextField(
-                    decoration: InputDecoration(
-                  labelText: "Write your review here...",
-                  labelStyle: TextStyle(color: Colors.white),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    ],
                   ),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.blue),
-                      borderRadius: BorderRadius.circular(10)),
-                  fillColor: Colors.black,
-                  filled: true,
-                )),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const SizedBox(height: 20),
+                  UserReview(),
+                  UserReview(),
+                  UserReview(),
+                ],
               ),
-              const SizedBox(width: 10),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-                child: const Text(
-                  'Submit',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ],
+            ),
           ),
-        ));
+        ],
+      ),
+    );
   }
 }
