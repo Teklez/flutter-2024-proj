@@ -33,12 +33,13 @@ class AdminPage extends StatelessWidget {
                   publisher: "New Youk Times Best seller",
                   releaseDate: "2021-10-10")),
           AGameCard(
-              game: Game(
-            name: "Game 2",
-            image: "assets/game2.jpg",
-            publisher: "New Youk Times Best seller",
-            releaseDate: "2021-10-10",
-          )),
+            game: Game(
+              name: "Game 2",
+              image: "assets/game2.jpg",
+              publisher: "New Youk Times Best seller",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           AGameCard(
             game: Game(
               name: "Game 3",

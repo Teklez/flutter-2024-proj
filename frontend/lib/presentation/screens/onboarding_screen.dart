@@ -29,11 +29,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Positioned(
             bottom: 20.0,
             right: 20.0,
-            child: TextButton(
+            child: IconButton(
+              icon: Icon(Icons.arrow_forward_sharp,
+                  color: _currentPage == 1
+                      ? Colors.grey
+                      : Color.fromARGB(255, 18, 94, 217)),
               onPressed: () {
-                Navigator.pushNamed(context, '/login');
+                if (_currentPage == 1) {
+                  Navigator.pushReplacementNamed(context, '/login');
+                } else {
+                  _pageController.nextPage(
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
+                }
               },
-              child: Text('Skip'),
             ),
           ),
           Positioned(
@@ -72,6 +82,14 @@ class OnboardingPage1 extends StatelessWidget {
       color: Colors.black,
       child: Center(
         child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                  'assets/game9.jpg'), // Or NetworkImage for network images
+              fit: BoxFit
+                  .cover, // Adjust how the image fits the container (optional)
+            ),
+          ),
           padding: EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

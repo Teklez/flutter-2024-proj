@@ -9,12 +9,10 @@ class AddGameForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
-        margin: const EdgeInsets.only(top: 16.0),
-        padding: const EdgeInsets.all(18.0),
-        child: Center(
-          child: _addGameForm(context, buttonName),
-        ),
-      ),
+          padding: const EdgeInsets.all(18.0),
+          child: Center(
+            child: _addGameForm(context, buttonName),
+          )),
     );
   }
 
