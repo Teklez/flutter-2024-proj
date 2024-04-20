@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/model/game.dart';
-import 'package:frontend/presentation/widgets/admin_game_card.dart';
+import 'package:frontend/presentation/widgets/custom_card.dart';
 
 import 'package:frontend/presentation/widgets/drawer.dart';
 

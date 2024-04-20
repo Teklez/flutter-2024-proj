@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/presentation/screens/about.dart';
 import 'package:frontend/presentation/screens/game_add.dart';
+import 'package:frontend/presentation/screens/game_detail.dart';
 import 'package:frontend/presentation/screens/login.dart';
 import 'package:frontend/presentation/screens/home.dart';
 import 'package:frontend/presentation/screens/register.dart';
 import 'package:frontend/presentation/screens/admin_page.dart';
 import 'package:frontend/presentation/screens/review.dart';
-import 'package:frontend/presentation/screens/review_add.dart';
 import 'package:frontend/presentation/screens/review_edit.dart';
 import 'package:frontend/presentation/screens/search.dart';
 import 'package:frontend/presentation/screens/users.dart';
@@ -38,6 +38,7 @@ class BetApp extends StatelessWidget {
         '/search': (BuildContext context) => const SearchPage(),
         '/review-edit': (BuildContext context) => ReviewEdit(),
         '/review-page': (BuildContext context) => RatingForm(),
+        '/game_details': (BuildContext context) => GameDetailPage(),
       },
       theme: ThemeData.dark(),
     );

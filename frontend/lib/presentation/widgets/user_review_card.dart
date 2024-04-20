@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:frontend/presentation/widgets/edit_delete_review.dart';
+import 'package:frontend/presentation/widgets/dialogues.dart';
 import 'package:frontend/presentation/widgets/rating.dart';
 
 import 'package:readmore/readmore.dart';
@@ -29,7 +29,7 @@ class UserReview extends StatelessWidget {
                         color: Colors.grey[350])),
               ],
             ),
-            Edit_Delete_PopUps()
+            const EditDeleteDialogue(route: "/review-edit"),
           ],
         ),
         const SizedBox(

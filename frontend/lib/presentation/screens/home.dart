@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/presentation/widgets/custom_card.dart';
 import 'package:frontend/model/game.dart';
+import 'package:frontend/presentation/widgets/dialogues.dart';
 
 import 'package:frontend/presentation/widgets/drawer.dart';
 
@@ -22,15 +23,7 @@ class HomePage extends StatelessWidget {
               Navigator.pushNamed(context, '/search');
             },
           ),
-          IconButton(
-            icon: const Icon(
-              Icons.tune,
-              semanticLabel: 'filter',
-            ),
-            onPressed: () {
-              print('Filter Button');
-            },
-          )
+          const Filter(),
         ],
         title: const Text(
           "BetEbet",

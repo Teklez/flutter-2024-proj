@@ -1,16 +1,11 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:frontend/presentation/screens/game_add.dart';
 
 // EDIT DELETE DIALOGUE
 // This dialogue is used to edit or delete a game. It is used in the AdminGameCard widget.
 
 class EditDeleteDialogue extends StatelessWidget {
-  const EditDeleteDialogue({
-    super.key,
-  });
+  final route;
+  const EditDeleteDialogue({super.key, required this.route});
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +22,8 @@ class EditDeleteDialogue extends StatelessWidget {
             ],
           ),
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const AddGameForm(buttonName: "Edit"),
-              ),
-            );
+            print("pushd to the page");
+            Navigator.pushNamed(context, route);
           }, // menu setting
         ),
         PopupMenuItem(
@@ -56,45 +47,6 @@ class EditDeleteDialogue extends StatelessWidget {
   }
 }
 
-// MENU
-// This widget is used to create a menu with a list of items. It is used in the AdminPage and user home widget.
-class Menu extends StatelessWidget {
-  final List<List<String>> names;
-  const Menu({super.key, required this.names});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: PopupMenuButton(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(3),
-        ),
-        clipBehavior: Clip.none,
-        position: PopupMenuPosition.under,
-        child: const Icon(Icons.menu),
-        itemBuilder: (context) => _buildMenu(names, context),
-        color: Colors.black,
-      ),
-    );
-  }
-}
-
-List<PopupMenuItem> _buildMenu(names, context) {
-  final List<PopupMenuItem<int>> popupMenus = [];
-  for (int i = 0; i < names.length; i++) {
-    var item = PopupMenuItem(
-      value: i,
-      child: Text(names[i][0]),
-      onTap: () {
-        Navigator.pushNamedAndRemoveUntil(
-            context, "${names[i][1]}", (route) => false);
-      },
-    );
-    popupMenus.add(item);
-  }
-  return popupMenus;
-}
 // BLOCK ROLE
 // This widget is used to block a user or change their role. It is used in the UsersPage widget.
 
@@ -159,6 +111,30 @@ class AreYouSureDialogue extends StatelessWidget {
             Navigator.pop(context);
           },
           child: const Text("Yes"),
+        ),
+      ],
+    );
+  }
+}
+
+// FILTER DIALOGUE
+class Filter extends StatelessWidget {
+  const Filter({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<String>(
+      child: Icon(Icons.tune),
+      itemBuilder: (context) => [
+        const PopupMenuItem(
+          value: "All",
+          child: Text("All"),
+        ),
+        const PopupMenuItem(
+          child: Text("4.5"),
+        ),
+        const PopupMenuItem(
+          child: Text("4.8"),
         ),
       ],
     );

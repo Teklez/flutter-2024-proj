@@ -53,7 +53,7 @@ class SearchPage extends StatelessWidget {
                 itemCount: searchResults
                     .length, // Use the length of your game objects list
                 itemBuilder: (context, index) =>
-                    _buildSearchResultTile(searchResults[index]),
+                    _buildSearchResultTile(searchResults[index], context),
               ),
             ),
           ],
@@ -63,7 +63,7 @@ class SearchPage extends StatelessWidget {
   }
   // Replace with your image URL
 
-  Widget _buildSearchResultTile(game) {
+  Widget _buildSearchResultTile(game, context) {
     return ListTile(
       leading: Container(
         width: 100,
@@ -95,6 +95,10 @@ class SearchPage extends StatelessWidget {
           ), // Replace with actual rating logic
         ],
       ),
+      onTap: () {
+        print("tapped");
+        Navigator.pushNamed(context, "/game_details");
+      },
     );
   }
 }
