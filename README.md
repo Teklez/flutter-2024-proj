@@ -1,7 +1,7 @@
 
 # BetEbet - Mobile Application
 
-BetEbet is a mobile application designed to provide users with a platform to explore  various betting games. Whether you're interested in sports betting, casino games, or other forms of gambling entertainment, BetEbet offers a convenient way to engage with betting activities and enjoy the thrill of wagering.
+BetEbet is a mobile application designed to provide users with a platform to explore  various betting games. Whether you're interested in sports betting, casino games, or other forms of gambling entertainment, BetEbet offers a convenient way to see what people say about the games.
 
 ## Features
 
