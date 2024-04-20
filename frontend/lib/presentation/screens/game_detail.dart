@@ -10,13 +10,13 @@ class GameDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
       ),
-      body: GameDetail(
+      body: const GameDetail(
         game: Game(
           name: "Russian Roulette",
           image: "assets/game4.jpg",

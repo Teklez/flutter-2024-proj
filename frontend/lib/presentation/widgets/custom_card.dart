@@ -152,25 +152,25 @@ class AGameCard extends StatelessWidget {
 
 class GameDetail extends StatelessWidget {
   final game;
-  const GameDetail({super.key, required this.game});
+  const GameDetail({Key? key, required this.game}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      elevation: 0.3,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          AspectRatio(
-            aspectRatio: 18 / 14,
-            child: Image.asset(
-              game.image,
-              fit: BoxFit.fill,
+    return SingleChildScrollView(
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        elevation: 0.3,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            AspectRatio(
+              aspectRatio: 18 / 14,
+              child: Image.asset(
+                game.image,
+                fit: BoxFit.fill,
+              ),
             ),
-          ),
-          Expanded(
-            child: Padding(
+            Padding(
               padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 5.0),
               child: Column(
                 children: <Widget>[
@@ -217,7 +217,8 @@ class GameDetail extends StatelessWidget {
                               horizontal: 20, vertical: 10)), // Set padding
                       shape: MaterialStateProperty.all(
                         RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ), // Set rounded corners
                     ),
                     child: const Text("Bet"),
@@ -226,9 +227,7 @@ class GameDetail extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        "See review",
-                      ),
+                      const Text("See review"),
                       IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, "/review");
@@ -236,12 +235,12 @@ class GameDetail extends StatelessWidget {
                         icon: const Icon(Icons.arrow_forward),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
