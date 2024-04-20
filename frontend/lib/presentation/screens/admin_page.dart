@@ -26,35 +26,49 @@ class AdminPage extends StatelessWidget {
         childAspectRatio: 8.0 / 10.0,
         children: const <Widget>[
           AGameCard(
-              game: Game(
-                  name: "Game 1",
-                  image: "assets/game4.jpg",
-                  publisher: "New Youk Times Best seller",
-                  releaseDate: "2021-10-10")),
-          AGameCard(
             game: Game(
-              name: "Game 2",
-              image: "assets/game2.jpg",
-              publisher: "New Youk Times Best seller",
-              releaseDate: "2021-10-10",
-            ),
-          ),
-          AGameCard(
-            game: Game(
-              name: "Game 3",
-              image: "assets/game3.jpg",
-              publisher: "New Youk Times Best seller",
-              releaseDate: "2021-10-10",
+              name: "Poker",
+              image: "assets/game1.jpg",
               rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
             ),
           ),
           AGameCard(
             game: Game(
-                name: "Game 4",
-                image: "assets/game4.jpg",
-                publisher: "New Youk Times Best seller",
-                releaseDate: "2021-10-10",
-                rating: 4.5),
+              name: "Russian Roulette",
+              image: "assets/game4.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
+          AGameCard(
+            game: Game(
+              name: "Blackjack",
+              image: "assets/game3.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
+          AGameCard(
+            game: Game(
+              name: "Slot Machine",
+              image: "assets/game2.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
+          AGameCard(
+            game: Game(
+              name: "Roulette",
+              image: "assets/game5.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
           ),
         ],
       ),

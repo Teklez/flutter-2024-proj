@@ -42,35 +42,104 @@ class HomePage extends StatelessWidget {
         childAspectRatio: 8.0 / 10.0,
         children: const <Widget>[
           GameCard(
-              game:
-                  Game(name: "Game 1", image: "assets/game4.jpg", rating: 4.5)),
+            game: Game(
+              name: "Poker",
+              image: "assets/game4.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game:
-                  Game(name: "Game 2", image: "assets/game2.jpg", rating: 4.5)),
+            game: Game(
+              name: "Russian Roulette",
+              image: "assets/game3.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game:
-                  Game(name: "Game 3", image: "assets/game3.jpg", rating: 4.5)),
+            game: Game(
+              name: "Blackjack",
+              image: "assets/game2.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game:
-                  Game(name: "Game 4", image: "assets/game4.jpg", rating: 4.5)),
+            game: Game(
+              name: "Slot Machine",
+              image: "assets/game5.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game:
-                  Game(name: "Game 5", image: "assets/game5.jpg", rating: 4.5)),
+            game: Game(
+              name: "Roulette",
+              image: "assets/game1.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game:
-                  Game(name: "Game 6", image: "assets/game6.jpg", rating: 4.5)),
+            game: Game(
+              name: "Blackjack",
+              image: "assets/game6.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game:
-                  Game(name: "Game 7", image: "assets/game7.jpg", rating: 4.5)),
+            game: Game(
+              name: "Slot Machine",
+              image: "assets/game7.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game:
-                  Game(name: "Game 8", image: "assets/game8.jpg", rating: 4.5)),
+            game: Game(
+              name: "Roulette",
+              image: "assets/game8.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game:
-                  Game(name: "Game 9", image: "assets/game9.jpg", rating: 4.5)),
+            game: Game(
+              name: "Poker",
+              image: "assets/game9.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
           GameCard(
-              game: Game(
-                  name: "Game 10", image: "assets/game10.jpg", rating: 4.5)),
+            game: Game(
+              name: "Russian Roulette",
+              image: "assets/game10.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
+          GameCard(
+            game: Game(
+              name: "Blackjack",
+              image: "assets/game11.jpg",
+              rating: 4.5,
+              publisher: "publisher: NIC private Inc.",
+              releaseDate: "2021-10-10",
+            ),
+          ),
         ],
       ),
     );

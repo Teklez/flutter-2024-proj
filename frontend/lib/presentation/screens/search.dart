@@ -8,10 +8,22 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const searchResults = [
-      Game(name: "game", image: "assets/game2.jpg", publisher: "publisher"),
-      Game(name: "game", image: "assets/game10.jpg", publisher: "publisher"),
-      Game(name: "game", image: "assets/game7.jpg", publisher: "publisher"),
-      Game(name: "game", image: "assets/game8.jpg", publisher: "publisher"),
+      Game(
+          name: "Poker",
+          image: "assets/game4.jpg",
+          publisher: "Publisher:NIC private Inc."),
+      Game(
+          name: "Russian Resulate",
+          image: "assets/game3.jpg",
+          publisher: "Publisher: NIC private Inc."),
+      Game(
+          name: "Blackjack",
+          image: "assets/game2.jpg",
+          publisher: "Publisher: NIC private Inc."),
+      Game(
+          name: "Slot Machine",
+          image: "assets/game1.jpg",
+          publisher: "Publisher: NIC private Inc."),
     ];
     return Material(
       child: Container(

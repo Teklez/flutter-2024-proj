@@ -7,12 +7,15 @@ class AddGameForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Container(
-          padding: const EdgeInsets.all(18.0),
-          child: Center(
-            child: _addGameForm(context, buttonName),
-          )),
+    return SingleChildScrollView(
+      child: Material(
+        child: Container(
+            margin: const EdgeInsets.only(top: 50.0), // Add margin
+            padding: const EdgeInsets.all(18.0),
+            child: Center(
+              child: _addGameForm(context, buttonName),
+            )),
+      ),
     );
   }
 
@@ -70,7 +73,7 @@ class AddGameForm extends StatelessWidget {
                 print('Add');
               },
               child: Text(buttonName,
-                  style: TextStyle(color: Color.fromARGB(255, 211, 47, 47))),
+                  style: TextStyle(color: Color.fromARGB(255, 47, 211, 151))),
             ),
           ],
         ),
